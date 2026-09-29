@@ -1,0 +1,24 @@
+timestamp,role,content
+2026-09-29T02:16:22,user,que libros tenemos disponibles ?
+2026-09-29T02:19:42,user,"hola, me puedes dar la lista de libros?"
+2026-09-29T02:19:42,tool_call,get_books({})
+2026-09-29T02:19:42,tool_result,"[{""title"": ""Cien anios de soledad"", ""author"": ""Gabriel Garcia Marquez"", ""quantity"": 2, ""id"": 1}, {""title"": ""La casa de los espiritus"", ""author"": ""Isabel Allende"", ""quantity"": 15, ""id"": 2}, {""title"": ""harry potter"", ""author"": ""jk r"", ""quantity"": 0, ""id"": 3}, {""title"": ""Rayuela"", ""author"": ""Julio Cortazar"", ""quantity"": 2, ""id"": 4}]"
+2026-09-29T02:19:42,assistant,"¡Hola! Estos son los libros del inventario:
+
+1. **Cien años de soledad** – Gabriel García Márquez (stock: 2)
+2. **La casa de los espíritus** – Isabel Allende (stock: 15)
+3. **Harry Potter** – J.K. Rowling (stock: 0)
+4. **Rayuela** – Julio Cortázar (stock: 2)
+
+¿Necesitas algo más?"
+2026-09-29T02:20:27,user,de harry poter agrega 15 unidades
+2026-09-29T02:22:25,user,agrega dos unides de harry potter
+2026-09-29T02:22:25,tool_call,get_books({})
+2026-09-29T02:22:25,tool_result,"[{""title"": ""Cien anios de soledad"", ""author"": ""Gabriel Garcia Marquez"", ""quantity"": 2, ""id"": 1}, {""title"": ""La casa de los espiritus"", ""author"": ""Isabel Allende"", ""quantity"": 15, ""id"": 2}, {""title"": ""harry potter"", ""author"": ""jk r"", ""quantity"": 0, ""id"": 3}, {""title"": ""Rayuela"", ""author"": ""Julio Cortazar"", ""quantity"": 2, ""id"": 4}]"
+2026-09-29T02:26:02,user,agrega dos unidads de harry potter
+2026-09-29T02:26:02,tool_call,get_books({})
+2026-09-29T02:26:02,tool_result,"[{""title"": ""Cien anios de soledad"", ""author"": ""Gabriel Garcia Marquez"", ""quantity"": 2, ""id"": 1}, {""title"": ""La casa de los espiritus"", ""author"": ""Isabel Allende"", ""quantity"": 15, ""id"": 2}, {""title"": ""harry potter"", ""author"": ""jk r"", ""quantity"": 0, ""id"": 3}, {""title"": ""Rayuela"", ""author"": ""Julio Cortazar"", ""quantity"": 2, ""id"": 4}]"
+2026-09-29T02:26:02,tool_call,"update_books({""book_id"":3,""delta"":2})"
+2026-09-29T02:26:02,tool_result,"{""title"": ""harry potter"", ""author"": ""jk r"", ""quantity"": 2, ""id"": 3}"
+2026-09-29T02:26:03,assistant,"Listo, agregué 2 unidades de ""harry potter"". Ahora hay 2 en stock."
+2026-09-29T02:28:31,user,vendimos 1 de cien años de soledad actualiza estock
